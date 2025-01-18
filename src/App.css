@@ -1,42 +1,253 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  z-index: 10; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px); 
+  height: 60px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: (0 2px 10px rgba(0, 0, 0, 0.2)); 
+}
+
+#banner-content {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  width: calc(100% - 600px); 
+  max-width: 1200px; 
+}
+#banner a{
+  font-size: 1.0rem;
+  color: white; 
+  transition: color 0.3s ease, font-size 0.3s ease;
+  opacity: 1;
+}
+
+#banner a:hover {
+  opacity: 0.7; 
+  transition: transform 0.3s ease;
+  color:rgb(219, 219, 225);
+}
+#home {
   text-align: center;
+  color: white;
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Align children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  /* Remove any extra margin */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#home h1 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titles {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  width: 100%;
+  max-width: 600px;
+}
+#about p{
+  font-size: 16px;
+  color: white;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  flex-direction: column; 
+  width: 700px; /* Fixed width */
+  margin: 0 auto;
+  font-weight: bold;
+}
+#about h1{
+  margin-bottom: 30px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  flex-direction: column; 
+  color: white;
+  margin-top: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#background-resume{
+  background-image: url('https://i.pinimg.com/736x/c2/d8/39/c2d83951afcbda54c5de6494c2715f56.jpg');
+  height: 100vh; 
+  width: 100%;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+}
+#resume{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  flex-direction: column; 
+  color: white;
+
+}
+#projects{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  flex-direction: column; 
+  color: white;
+
 }
 
-.card {
-  padding: 2em;
+#social-icons {
+  display: flex;
+  justify-content: center; 
+  gap: 100px; 
+  
 }
 
-.read-the-docs {
-  color: #888;
+.icon {
+  font-size: 1.8rem;
+  color: white; 
+  transition: transform 0.1s ease, color 0.1s ease; 
 }
+
+.icon:hover {
+  color: rgb(219, 219, 225); 
+  transform: translateY(-3px); 
+}
+.typing-effect {
+  font-family: 'Roboto', sans-serif; /* Replace with your desired font */
+  font-size: 2rem;
+  color: #f0f0f0;
+  display: inline-block;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  width: 11ch; /* Ensure width matches the 7 characters */
+  animation: typing 2s steps(11, end) forwards, blink 0.5s step-end infinite;
+  border-right: 2px solid #f0f0f0;
+}
+/* Skills section container */
+#skills {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Skills header */
+#skills h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Separator line */
+.separator {
+  border: 0;
+  height: 2px;
+  background: #ddd;
+  width: 50%;
+  margin: 20px auto;
+}
+
+/* Individual skill container */
+.skill {
+  margin: 20px 0;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Skill title */
+.skill h2 {
+  font-size: 1.0rem;
+  margin-bottom: 5px;
+}
+
+/* Progress bar container */
+.progress-bar {
+  background: #f0f0f0;
+  
+  height: 5px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar fill */
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #091048, #171175);
+ 
+}
+.progress-percentage{
+  font-weight: bold;
+}
+.project-box {
+  position: relative;
+  width: 300px; /* You can adjust this size */
+  height: 200px; /* You can adjust this size */
+  overflow: hidden;
+  margin-left: 20px;
+  border-radius: 5px; 
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the box */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  border-radius: 5px;
+
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0; /* Initially hide the description */
+  transition: opacity 0.3s ease-in-out;
+  padding: 10px;
+  box-sizing: border-box;
+  
+}
+
+.project-box:hover .description {
+  opacity: 1; /* Show the description on hover */
+  margin-left: 10;
+}
+
+.project-box:hover .project-image {
+  opacity: 0.3; /* Make the image more opaque on hover */
+  margin-left: 10;
+}
+#background-projects{
+  background-image: url('https://i.pinimg.com/736x/d9/3c/d1/d93cd184e41dce84f263a351aff822f3.jpg');
+  height: 100vh; 
+  width: 100%;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
